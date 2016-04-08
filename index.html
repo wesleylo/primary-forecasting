@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>EditableGrid Demo - Database Link</title>
+		
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/bootstrap-progressbar.min.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/bootstrap-collapse.min.css" type="text/css" media="screen">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700italic,700,600italic,300' rel='stylesheet' type='text/css'>
+        	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="css/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+        	</head>
+	
+	<body id="bootstrap-overrides">
+		<div id="pb-root">
+			<section id="top-content" class="col-xs-12 layout">
+				<div class="border-bottom-hairline border-bottom-">
+					<div class="campaignlabel">
+						<span style="margin-top:4px; margin-right:0.5rem;"> 
+							Campaign <img src="//www.washingtonpost.com/wp-dre/content/elections/live-results/img/star-md.png" style="height:24px; margin-top:-4px"> 2016 
+						</span>
+					</div>
+					<div class="clear">
+						<h1>U.S. Democratic primary forecasting</h1>
+						<p>Forecast the results of the remaining primaries.</p>
+					</div>
+				 </div>
+			</section>
+			<div class="row">
+			<section id="main-content" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 layout">
+				<div class="article border-bottom-hairline">
+					<h2>State of the race</h2>
+					<h3>As of the most recent primary on April, 5 2016, Donald Trump is well in the lead of the Republican race. On the Democratic side, though, the gap between candidates is smaller. Currently, Hillary Clinton leads over Bernie Sanders with 1,302 to 1,121 pledged delegates.</h3><br>
+					<h3>Many news outlets insist that Bernie Sanders is out of the race, but this is not true. <a href="https://www.washingtonpost.com/2016-election-results/us-primaries/#fx9beQ17vvwyHp" target="_blank">Sources</a> say that &#34;in order to make up ground, Sanders would need to win more than 70 percent of the remaining pledged delegates.&#34; In these comparisons, though, Hillary Clinton&#39;s lead is overestimated due to the inclusion of superdelegates. <a href="https://en.wikipedia.org/wiki/Superdelegate" target="_blank">Superdelegates</a>, unlike delegates, are mostly high-ranking Democratic party officials that are not bound to represent the popular vote. They may support any candidate for the nomination and change their vote at any time.</h3><br>
+					<h3>Based solely on the pledged delegate counts which represent American voters, Sanders needs to obtain about 57% of the delegates from the remaining 18 states to overtake Clinton. After his huge-margin victories in the latest caucuses (82% in Alaska, 70% in Hawaii, and 72% in Washington), this is not unachievable. Sanders brings momentum into the northern states where he has been expected to do his best.</h3><br><br>
+					<h2>How it works</h2>
+					<h3>Use this tool to see just how close the race is. Forecast the winner of the Democatic nomination based on your predictions for the remaining primaries. In the table below, click on a cell in either the ‘% Votes: Clinton’ or ‘% Votes Sanders’ columns to adjust a candidate’s standing in a state. In the event of a tie, a winner will be randomly chosen. Delegate counts at the top will update automatically. Please note: this tool uses a simplified version of the delegate allocation model that is strictly proportional based on state results. To learn more about how Democratic delegates are awarded click <a href="http://frontloading.blogspot.com/p/2016-democratic-delegate-allocation.html" target="_blank">here</a>. Primaries outside of the 50 states are not included. Unpledged delegates or superdelegates are not included as they are not representative of the popular vote.</h3><br>
+
+					
+				</div>
+				<div class="wpe-card hcvbs">
+				<div class="row">
+					<div class="hc-pic col-sm-2 col-xs-3 layout">
+						<img class="img-responsive" src="/primary-forecasting/img/hillary-clinton-gray.jpg">
+					</div>
+					
+					<div class="hc-progress col-sm-10 col-xs-9 layout">
+					<h6>Hillary Clinton</h6>
+					<div class="progress">
+    						<div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 54.217%;">
+        						1292/2383
+    						</div>
+					</div>
+					</div>
+				</div> 
+				<div class="row">
+					<div class="bs-pic col-sm-2 col-xs-3 layout">
+						<img class="img-responsive" src="/primary-forecasting/img/bernie-sanders-gray.jpg">
+					</div>
+					
+					<div class="bs-progress col-sm-10 col-xs-9 layout">
+					<h6>Bernie Sanders</h6>
+					<div class="progress">
+    						<div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 45.027%;">
+        						1073/2383
+    						</div>
+					</div>
+					</div>
+				</div> 
+				</div>
+
+				<div class="wpe-card">
+					<div id="map" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+				</div>
+			</section>
+			
+			
+			        
+			
+
+			</div>
+			<section>
+			  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">PREVIOUS PRIMARIES</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<div id="tablecontent1"></div>
+        </div>
+        <div class="panel-footer"><input type="text" id="filter1" name="filter" placeholder="Search"/></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">UPCOMING PRIMARIES</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse in">
+        <div class="panel-body">
+        	<div id="tablecontent2"></div>
+        </div>
+        <div class="panel-footer"><input type="text" id="filter2" name="filter" placeholder="Search"/></div>
+      </div>
+    </div>
+  </div>	
+			
+			</section>
+		</div>
+		
+
+
+
+
+
+ 	
+
+	
+	<script src="js/jquery-1.11.1.min.js" ></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+
+<script src="js/editablegrid-2.1.0-b25.js"></script>   
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+<script src="js/map.js"></script>
+
+	<script src="js/griddemo.js" ></script>
+	
+
+	<script type="text/javascript">
+		var datagrid = new DatabaseGrid();
+
+		window.onload = function() { 
+
+                	// key typed in the filter field
+                	$("#filter1").keyup(function() {
+                    		datagrid.filtergrid1.filter( $(this).val(), [2,3,4,5,6,7]);
+			})
+			$("#filter2").keyup(function() {
+                    		datagrid.filtergrid2.filter( $(this).val(), [2,3,4,5,6,7]);
+			})
+		}; 
+	</script>
+
+        
+
+
+	</body>
+
+</html>

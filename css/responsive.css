@@ -1,0 +1,23 @@
+/** 
+ * Make table responsive.
+ * Solution foun here : http://elvery.net/demo/responsive-tables/
+ **/
+
+
+@media only screen and (max-width: 950px) {
+	.editablegrid-s_delegates
+	{display: none;}
+}
+ 
+@media only screen and (max-width: 750px) {
+	.editablegrid-sname, .panel-footer
+	{display: none;}
+.editablegrid-code {
+display: table-cell !important;
+	}
+}
+
+@media only screen and (max-width: 645px) {
+	.editablegrid-hc_delegates, .editablegrid-bs_delegates
+	{display: none;}
+}
